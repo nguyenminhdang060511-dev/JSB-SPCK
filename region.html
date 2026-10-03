@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Câu Chuyện - CHẠM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="story-page-bg">
+
+  <!-- NAVBAR CHUẨN DÙNG CHO TOÀN TRANG -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success fs-3" href="index.html">CHẠM.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-bold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link active text-success" href="region.html">Câu chuyện</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BỘ LỌC VÀ NÚT QUAY LẠI -->
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <a href="index.html" class="btn btn-outline-success rounded-pill">
+        <i class="fa-solid fa-arrow-left me-2"></i>Quay lại Trang chủ
+      </a>
+      
+      <!-- Bộ lọc nhanh vùng miền -->
+      <div class="dropdown">
+        <button class="btn btn-success dropdown-toggle rounded-pill" type="button" data-bs-toggle="dropdown">
+          <i class="fa-solid fa-filter me-1"></i> Chọn Vùng Miền
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="region.html">Tất cả vùng miền</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="region.html?vung=dong-bac">Đông Bắc</a></li>
+          <li><a class="dropdown-item" href="region.html?vung=tay-bac">Tây Bắc</a></li>
+          <li><a class="dropdown-item" href="region.html?vung=bac-trung-bo">Bắc Trung Bộ</a></li>
+          <li><a class="dropdown-item" href="region.html?vung=duyen-hai-mien-trung">Duyên Hải Miền Trung</a></li>
+          <li><a class="dropdown-item" href="region.html?vung=tay-nguyen">Tây Nguyên</a></li>
+          <li><a class="dropdown-item" href="region.html?vung=nam-bo">Nam Bộ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tiêu đề trang -->
+    <div class="text-center mb-5">
+      <h1 id="region-title" class="fw-bold text-success display-5">HÀNH TRÌNH CHẠM</h1>
+      <p id="region-subtitle" class="text-muted fs-5">Những câu chuyện mộc mạc và chân thật trên khắp mọi miền đất nước</p>
+    </div>
+
+    <!-- Danh sách card câu chuyện -->
+    <div class="row g-4 justify-content-center" id="stories-container">
+      <!-- JavaScript sẽ tự render dữ liệu vào đây -->
+    </div>
+  </div>
+
+  <!-- SCRIPT BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DỮ LIỆU CÂU CHUYỆN (Đầy đủ dữ liệu chuẩn) -->
+  <script>
+    const storiesData = {
+      "dong-bac": {
+        title: "CÂU CHUYỆN ĐÔNG BẮC",
+        stories: [
+          {
+            id: "sao-dung",
+            location: "Hà Giang",
+            title: "Sào & Dung 🌟 Điểm tựa trên đá xám",
+            shortDesc: "Hành trình vượt qua cái nghèo và hủ tục ở vùng cao Mèo Vạc của hai anh em Sào và Dung.",
+            image: "https://sohanews.sohacdn.com/160588918557773824/2022/10/10/photo-9-16653606577931750067419.jpg"
+          },
+          {
+            id: "chao-lu-may",
+            location: "Cao Bằng",
+            title: "Chảo Lù May 🌟 Lớp học cõng nắng trên đỉnh Phia Oắc",
+            shortDesc: "Người cô giáo trẻ kiên trì bám bản để gieo chữ cho trẻ em người Dao Tiền.",
+            image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      },
+      "tay-bac": {
+        title: "CÂU CHUYỆN TÂY BẮC",
+        stories: [
+          {
+            id: "luu-trung-viet",
+            location: "Lào Cai",
+            title: "Lưu Trung Việt 🌟 Mầm xanh sau trận lũ lịch sử",
+            shortDesc: "Nghị lực đứng dậy sau thiên tai của cậu bé vùng bão lũ Bảo Yên.",
+            image: "images/luu-trung-viet.jpg"
+          },
+          {
+            id: "tho-huong",
+            location: "Lào Cai",
+            title: "Tho & Hương 🌟 Tiếng khèn bên dòng Chảy",
+            shortDesc: "Tình yêu nghệ thuật truyền thống và ước mơ giữ gìn bản sắc văn hóa H'Mông.",
+            image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      },
+      "bac-trung-bo": {
+        title: "CÂU CHUYỆN BẮC TRUNG BỘ",
+        stories: [
+          {
+            id: "bac-trung-bo-1",
+            location: "Nghệ An",
+            title: "Ước mơ xanh bên dòng sông Lam",
+            shortDesc: "Hành trình vươn lên vượt qua bão lũ của những em nhỏ đất miền Trung kiên cường.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      },
+      "duyen-hai-mien-trung": {
+        title: "CÂU CHUYỆN DUYÊN HẢI MIỀN TRUNG",
+        stories: [
+          {
+            id: "duyen-hai-1",
+            location: "Quảng Nam",
+            title: "Nụ cười nơi làng chài ven biển",
+            shortDesc: "Sức sống bền bỉ và ước mơ bám biển giữ nghề truyền thống của ngư dân.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      },
+      "tay-nguyen": {
+        title: "CÂU CHUYỆN TÂY NGUYÊN",
+        stories: [
+          {
+            id: "tay-nguyen-1",
+            location: "Đắk Lắk",
+            title: "Tiếng cồng chiêng giữa đại ngàn",
+            shortDesc: "Gìn giữ ngọn lửa văn hóa cổ truyền của thanh niên các buôn làng Tây Nguyên.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      },
+      "nam-bo": {
+        title: "CÂU CHUYỆN NAM BỘ",
+        stories: [
+          {
+            id: "nam-bo-1",
+            location: "Cần Thơ",
+            title: "Ấm áp phù sa sông nước",
+            shortDesc: "Lớp học tình thương trên sông Hậu và những trái tim nhân ái vùng miền Tây.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80"
+          }
+        ]
+      }
+    };
+  </script>
+
+  <!-- LOGIC RENDER HIỂN THỊ CÂU CHUYỆN -->
+  <script>
+    // Hàm dựng HTML cho từng card câu chuyện
+    function renderStoryCard(story, vungKey) {
+      return `
+        <div class="col-md-6 col-lg-4">
+          <div class="story-card bg-white rounded-3 shadow-sm overflow-hidden h-100" 
+               style="cursor: pointer; transition: transform 0.2s;"
+               onclick="location.href='story-detail.html?vung=${vungKey}&id=${story.id}'">
+            <img src="${story.image}" class="w-100" style="height: 220px; object-fit: cover;" alt="${story.title}">
+            <div class="p-4">
+              <span class="badge bg-success mb-2">${story.location}</span>
+              <h3 class="fw-bold h5 mb-2 text-dark">${story.title}</h3>
+              <p class="text-muted small mb-3 text-truncate-2">${story.shortDesc}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-success fw-bold small">Đọc chi tiết <i class="fa-solid fa-arrow-right ms-1"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Hàm load dữ liệu dựa trên tham số URL (?vung=...)
+    function loadPageContent() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const regionKey = urlParams.get('vung');
+
+      const container = document.getElementById('stories-container');
+      const titleEl = document.getElementById('region-title');
+      const subtitleEl = document.getElementById('region-subtitle');
+
+      if (!container) return;
+
+      let htmlContent = '';
+
+      // Trường hợp 1: Chọn một vùng cụ thể (từ Bản đồ hoặc Dropdown)
+      if (regionKey && storiesData[regionKey]) {
+        const regionData = storiesData[regionKey];
+        if (titleEl) titleEl.innerText = regionData.title;
+        if (subtitleEl) subtitleEl.innerText = `Lắng nghe các câu chuyện truyền cảm hứng tại ${regionData.title}`;
+
+        if (regionData.stories && regionData.stories.length > 0) {
+          regionData.stories.forEach(story => {
+            htmlContent += renderStoryCard(story, regionKey);
+          });
+        } else {
+          htmlContent = `<div class="col-12 text-center text-muted py-5"><p>Chưa có câu chuyện nào cho vùng này.</p></div>`;
+        }
+      } 
+      // Trường hợp 2: Xem "Tất cả vùng miền"
+      else {
+        if (titleEl) titleEl.innerText = "TẤT CẢ CÂU CHUYỆN";
+        if (subtitleEl) subtitleEl.innerText = "Những câu chuyện mộc mạc và chân thật trên khắp mọi miền đất nước";
+
+        Object.keys(storiesData).forEach(vung => {
+          if (storiesData[vung].stories) {
+            storiesData[vung].stories.forEach(story => {
+              htmlContent += renderStoryCard(story, vung);
+            });
+          }
+        });
+      }
+
+      container.innerHTML = htmlContent;
+    }
+
+    // Tự động kích hoạt khi trang tải xong hoặc khi bấm Back/Forward trên trình duyệt
+    document.addEventListener('DOMContentLoaded', loadPageContent);
+    window.addEventListener('pageshow', loadPageContent);
+  </script>
+</body>
+</html>

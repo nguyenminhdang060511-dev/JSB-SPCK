@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHẠM — Những câu chuyện đáng được nhìn thấy</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Jim+Nightshade&family=Sedgwick+Ave&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success fs-4" href="index.html">🌿 Chạm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link active text-success" href="index.html">Trang Chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="fundraising.html">Chiến Dịch</a></li>
+          <li class="nav-item"><a class="nav-link" href="lessons.html">Bài Học</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Về CHẠM</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section text-white text-center position-relative overflow-hidden">
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOuwUJsVJqxoUEY2hWlJjJmawslIxA9WuuJFMk-V_9ja3moT4-Pzvyxiw&s=10"
+      class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Trẻ em vùng cao CHẠM"
+      style="z-index: 1; filter: brightness(0.55);">
+
+    <div class="container py-5 position-relative" style="z-index: 2;">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <h1 class="display-3 fw-bold mb-3">CHẠM</h1>
+          <p class="fs-4 fst-italic text-light mb-3">Chạm vào câu chuyện – Chạm đến sự thay đổi.</p>
+          <p class="lead mb-4 text-white-50 fs-6">
+            CHẠM là nền tảng kể chuyện xã hội nhằm đưa những câu chuyện đời thực của các gia đình có hoàn cảnh khó khăn
+            và cộng đồng vùng núi đến gần hơn với người trẻ. Thông qua đó, biến sự đồng cảm thành những hành động thiết
+            thực.
+          </p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="#cau-chuyen" class="btn btn-success btn-lg rounded-pill px-4">KHÁM PHÁ CÂU CHUYỆN</a>
+            <a href="fundraising.html" class="btn btn-outline-light btn-lg rounded-pill px-4">XEM CHIẾN DỊCH</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- SECTION 2: BẢN ĐỒ VIỆT NAM TƯƠNG TÁC (CHẤN CHỈ / POINTER LINE) -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-2">MỘT VIỆT NAM – NHIỀU CÂU CHUYỆN</h2>
+      <p class="text-muted mb-4">Nhấp vào từng vùng miền để xem các câu chuyện tương ứng</p>
+
+      <div class="map-wrapper shadow-sm bg-white rounded-4 p-4 position-relative">
+        <!-- Ảnh bản đồ Việt Nam cờ đỏ sao vàng -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Vietnam_Full_flag_map.png"
+          class="img-fluid map-image" alt="Bản đồ Việt Nam CHẠM">
+
+        <!-- Tây Bắc (Kéo sang trái) -->
+        <div class="map-pointer pointer-left pin-tay-bac">
+          <a href="region.html?vung=tay-bac" class="pointer-label">Tây Bắc: 8</a>
+          <div class="pointer-line" style="width: 70px;"></div>
+          <div class="pointer-dot"></div>
+        </div>
+
+        <!-- Đông Bắc (Kéo sang phải) -->
+        <div class="map-pointer pointer-right pin-dong-bac">
+          <div class="pointer-dot"></div>
+          <div class="pointer-line" style="width: 80px;"></div>
+          <a href="region.html?vung=dong-bac" class="pointer-label">Đông Bắc: 12</a>
+        </div>
+
+        <!-- Bắc Trung Bộ (Kéo sang trái) -->
+        <div class="map-pointer pointer-left pin-btb">
+          <a href="region.html?vung=bac-trung-bo" class="pointer-label">Bắc Trung Bộ: 5</a>
+          <div class="pointer-line" style="width: 60px;"></div>
+          <div class="pointer-dot"></div>
+        </div>
+
+        <!-- Duyên Hải Miền Trung (Kéo sang phải) -->
+        <div class="map-pointer pointer-right pin-dhmt">
+          <div class="pointer-dot"></div>
+          <div class="pointer-line" style="width: 75px;"></div>
+          <a href="region.html?vung=duyen-hai-mien-trung" class="pointer-label">Duyên Hải Miền Trung: 9</a>
+        </div>
+
+        <!-- Tây Nguyên (Kéo sang trái) -->
+        <div class="map-pointer pointer-left pin-tay-nguyen">
+          <a href="region.html?vung=tay-nguyen" class="pointer-label">Tây Nguyên: 6</a>
+          <div class="pointer-line" style="width: 80px;"></div>
+          <div class="pointer-dot"></div>
+        </div>
+
+        <!-- Nam Bộ (Kéo sang phải) -->
+        <div class="map-pointer pointer-right pin-nam-bo">
+          <div class="pointer-dot"></div>
+          <div class="pointer-line" style="width: 90px;"></div>
+          <a href="region.html?vung=nam-bo" class="pointer-label">Nam Bộ: 15</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CÂU CHUYỆN NỔI BẬT -->
+<section id="cau-chuyen" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">CÂU CHUYỆN NỔI BẬT</h2>
+    <div class="row g-4">
+
+      <!-- Story Card 1: Sào & Dung -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="https://sohanews.sohacdn.com/160588918557773824/2022/10/10/photo-9-16653606577931750067419.jpg" class="card-img-top object-fit-cover" alt="Sào & Dung - Hà Giang">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Đông Bắc • Hà Giang</span>
+              <h5 class="card-title fw-bold">Sào & Dung 🌟 Điểm tựa trên đá xám</h5>
+              <p class="card-text text-muted small">Vượt qua gian khó ở Mèo Vạc để tiếp bước tới trường.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=dong-bac&id=sao-dung" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Card 2: Chảo Lù May -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80" class="card-img-top object-fit-cover" alt="Chảo Lù May - Cao Bằng">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Đông Bắc • Cao Bằng</span>
+              <h5 class="card-title fw-bold">Chảo Lù May 🌟 Lớp học cõng nắng</h5>
+              <p class="card-text text-muted small">Người cô giáo trẻ gieo chữ cho trẻ em người Dao Tiền.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=dong-bac&id=chao-lu-may" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Card 3: Lưu Trung Việt -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="images/luu-trung-viet.jpg" class="card-img-top object-fit-cover" alt="Lưu Trung Việt - Lào Cai">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Tây Bắc • Lào Cai</span>
+              <h5 class="card-title fw-bold">Lưu Trung Việt 🌟 Mầm xanh sau trận lũ</h5>
+              <p class="card-text text-muted small">Nghị lực đứng dậy sau thiên tai của cậu bé Bảo Yên.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=tay-bac&id=luu-trung-viet" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Card 4: Tho & Hương -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=80" class="card-img-top object-fit-cover" alt="Tho & Hương - Lào Cai">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Tây Bắc • Lào Cai</span>
+              <h5 class="card-title fw-bold">Tho & Hương 🌟 Tiếng khèn bên dòng Chảy</h5>
+              <p class="card-text text-muted small">Ước mơ giữ gìn và lan tỏa bản sắc văn hóa H'Mông.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=tay-bac&id=tho-huong" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Card 5: Nghệ An -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80" class="card-img-top object-fit-cover" alt="Sông Lam - Nghệ An">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Bắc Trung Bộ • Nghệ An</span>
+              <h5 class="card-title fw-bold">Ước mơ xanh bên dòng sông Lam</h5>
+              <p class="card-text text-muted small">Hành trình vươn lên vượt bão lũ của học sinh xứ Nghệ.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=bac-trung-bo&id=bac-trung-bo-1" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Card 6: Cần Thơ -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+          <div class="ratio ratio-16x9">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80" class="card-img-top object-fit-cover" alt="Sông Hậu - Cần Thơ">
+          </div>
+          <div class="card-body p-4 d-flex flex-column">
+            <div>
+              <span class="badge bg-success-subtle text-success mb-2">Nam Bộ • Cần Thơ</span>
+              <h5 class="card-title fw-bold">Ấm áp phù sa sông nước</h5>
+              <p class="card-text text-muted small">Lớp học tình thương chắp cánh ước mơ trên sông Hậu.</p>
+            </div>
+            <div class="mt-auto pt-3">
+              <a href="story-detail.html?vung=nam-bo&id=nam-bo-1" class="btn btn-outline-success btn-sm rounded-pill w-100">Đọc câu chuyện &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- SECTION 5: CHIẾN DỊCH GÂY QUỸ -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">🎒 CHIẾN DỊCH ĐANG GÂY QUỸ</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-5">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop"
+                  class="img-fluid h-100 object-fit-cover" alt="Chiến dịch Balo" style="min-height: 220px;">
+              </div>
+              <div class="col-md-7 p-4">
+                <span class="badge bg-warning text-dark mb-2">Đang quyên góp</span>
+                <h4 class="card-title fw-bold">MỘT CHIẾC BALO – MỘT CÂU CHUYỆN</h4>
+                <p class="text-muted small">Hỗ trợ balo và dụng cụ học tập cho học sinh Hoàng Su Phì, Hà Giang.</p>
+                <div class="progress my-3">
+                  <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                </div>
+                <div class="d-flex justify-content-between fw-bold mb-3 small">
+                  <span>Đã nhận: 0 Balo</span>
+                  <span class="text-muted">Mục tiêu: 200 Balo</span>
+                </div>
+                <a href="campaign-detail.html" class="btn btn-success rounded-pill px-4 btn-sm fw-bold">XEM CHI TIẾT
+                  CHIẾN DỊCH →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2026 CHẠM — Chạm vào câu chuyện – Chạm đến sự thay đổi.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

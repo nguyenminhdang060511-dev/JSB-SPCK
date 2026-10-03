@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Câu Chuyện - CHẠM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success fs-3" href="index.html">CHẠM.</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-bold">
+          <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link text-success" href="region.html">Câu chuyện</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- NỘI DUNG CHI TIẾT CÂU CHUYỆN -->
+  <div class="container my-5">
+    <!-- Nút quay lại -->
+    <div class="mb-4">
+      <a id="back-btn" href="region.html" class="btn btn-outline-success rounded-pill">
+        <i class="fa-solid fa-arrow-left me-2"></i>Quay lại danh sách
+      </a>
+    </div>
+
+    <!-- Khung hiển thị bài viết -->
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="bg-white p-4 p-md-5 rounded-3 shadow-sm" id="detail-container">
+          <!-- JavaScript sẽ tự render bài viết vào đây -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DỮ LIỆU CÂU CHUYỆN ĐẦY ĐỦ CHO TẤT CẢ VÙNG MIỀN -->
+  <script>
+    const storiesData = {
+      "dong-bac": {
+        stories: [
+          {
+            id: "sao-dung",
+            location: "Hà Giang",
+            title: "Sào & Dung 🌟 Điểm tựa trên đá xám",
+            shortDesc: "Hành trình vượt qua cái nghèo và hủ tục ở vùng cao Mèo Vạc của hai anh em Sào và Dung.",
+            image: "https://sohanews.sohacdn.com/160588918557773824/2022/10/10/photo-9-16653606577931750067419.jpg",
+            content: `
+              <p class="lead fw-normal">Sào và Dung sinh ra và lớn lên tại vùng đá xám Mèo Vạc, Hà Giang — nơi điều kiện thiên nhiên khắc nghiệt và cuộc sống còn nhiều thiếu thốn.</p>
+              <p>Mất cha mẹ từ sớm, hai anh em phải tự tựa vào nhau để sống qua ngày. Sào, người anh cả, đã gác lại những ước mơ cá nhân để vừa làm nương rẫy, vừa làm đủ nghề kiếm sống nuôi em gái đi học.</p>
+              <p>Dù hoàn cảnh vô cùng gian khó, Dung vẫn kiên trì bám lớp, bám trường. Câu chuyện của hai anh em không chỉ là nghị lực sống phi thường mà còn là nguồn cảm hứng lan tỏa tình yêu thương và sự kiên cường cho thế hệ trẻ vùng cao.</p>
+            `
+          },
+          {
+            id: "chao-lu-may",
+            location: "Cao Bằng",
+            title: "Chảo Lù May 🌟 Lớp học cõng nắng trên đỉnh Phia Oắc",
+            shortDesc: "Người cô giáo trẻ kiên trì bám bản để gieo chữ cho trẻ em người Dao Tiền.",
+            image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Nằm trên đỉnh núi Phia Oắc lộng gió, điểm trường nghèo từng thiếu thốn đủ đường từ điện, nước cho đến sách vở.</p>
+              <p>Cô giáo Chảo Lù May, một người con của bản làng, sau khi tốt nghiệp đã quyết định quay trở về quê hương để gieo chữ cho các em nhỏ người Dao Tiền.</p>
+              <p>Hàng ngày, cô vượt qua hàng chục cây số đường rừng sương giăng để mang tri thức, niềm vui và mở ra một tương lai tươi sáng hơn cho thế hệ mầm non nơi đây.</p>
+            `
+          }
+        ]
+      },
+      "tay-bac": {
+        stories: [
+          {
+            id: "luu-trung-viet",
+            location: "Lào Cai",
+            title: "Lưu Trung Việt 🌟 Mầm xanh sau trận lũ lịch sử",
+            shortDesc: "Nghị lực đứng dậy sau thiên tai của cậu bé vùng bão lũ Bảo Yên.",
+            image: "images/luu-trung-viet.jpg",
+            content: `
+              <p class="lead fw-normal">Trận lũ lịch sử đã càn quét qua làng quê nghèo ở Bảo Yên, Lào Cai, cuốn trôi nhiều ngôi nhà và tài sản của người dân.</p>
+              <p>Gia đình em Lưu Trung Việt cũng chịu thiệt hại nặng nề. Tuy nhiên, trong gian khó, Việt vẫn không từ bỏ việc học. Em tranh thủ từng cuốn sách còn sót lại khô ráo sau lũ để ôn bài.</p>
+              <p>Hình ảnh cậu bé miệt mài học tập bên ngôi nhà đang được khôi phục chính là biểu tượng cho sự hồi sinh và sức sống bền bỉ của con người vùng cao.</p>
+            `
+          },
+          {
+            id: "tho-huong",
+            location: "Lào Cai",
+            title: "Tho & Hương 🌟 Tiếng khèn bên dòng Chảy",
+            shortDesc: "Tình yêu nghệ thuật truyền thống và ước mơ giữ gìn bản sắc văn hóa H'Mông.",
+            image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Bên dòng sông Chảy hiền hòa, tiếng khèn H'Mông của Tho và giọng hát của Hương luôn vang vọng mỗi dịp hội làng.</p>
+              <p>Hai bạn trẻ không chỉ đam mê giai điệu quê hương mà còn chủ động thành lập nhóm sinh hoạt văn hóa để dạy lại tiếng khèn, điệu múa truyền thống cho các em nhỏ trong bản.</p>
+              <p>Nhờ tình yêu và nhiệt huyết của Tho & Hương, làn điệu văn hóa dân tộc H'Mông tiếp tục được gìn giữ và lan tỏa đến nhiều thế hệ mai sau.</p>
+            `
+          }
+        ]
+      },
+      "bac-trung-bo": {
+        stories: [
+          {
+            id: "bac-trung-bo-1",
+            location: "Nghệ An",
+            title: "Ước mơ xanh bên dòng sông Lam",
+            shortDesc: "Hành trình vươn lên vượt qua bão lũ của những em nhỏ đất miền Trung kiên cường.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Sông Lam chứng kiến biết bao mùa bão lũ đi qua, nhưng cũng chính tại đây, tinh thần hiếu học và sự kiên cường của người dân xứ Nghệ lại sáng ngời hơn bao giờ hết.</p>
+              <p>Dù mái trường có bị bùn lầy bao phủ sau mỗi đợt thiên tai, các em nhỏ nơi đây vẫn nắn nót từng nét chữ trên những cuốn vở phơi khô. Nghị lực vượt khó của các em là ngọn lửa sưởi ấm niềm tin cho cả làng quê.</p>
+              <p>Những suất học bổng và sự đồng hành của cộng đồng đã tiếp thêm sức mạnh, giúp các em vững bước trên con đường tìm kiếm tri thức và xây dựng tương lai.</p>
+            `
+          }
+        ]
+      },
+      "duyen-hai-mien-trung": {
+        stories: [
+          {
+            id: "duyen-hai-1",
+            location: "Quảng Nam",
+            title: "Nụ cười nơi làng chài ven biển",
+            shortDesc: "Sức sống bền bỉ và ước mơ bám biển giữ nghề truyền thống của ngư dân.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Làng chài nhỏ ven biển Quảng Nam bao năm qua luôn đối mặt với những ngọn sóng lớn và sự biến đổi khôn lường của đại dương.</p>
+              <p>Thế nhưng, những giọt mồ hôi mặn mòi không làm dập tắt được nụ cười lạc quan của bà con ngư dân. Các bạn trẻ trong làng đã bắt đầu ứng dụng công nghệ để quảng bá hải sản và văn hóa làng nghề truyền thống ra khắp mọi miền.</p>
+              <p>Câu chuyện bám biển giữ nghề không chỉ là kế sinh nhai, mà còn là niềm tự hào bảo vệ vùng biển quê hương của những con người kiên trung nơi dải đất miền Trung.</p>
+            `
+          }
+        ]
+      },
+      "tay-nguyen": {
+        stories: [
+          {
+            id: "tay-nguyen-1",
+            location: "Đắc Lắk",
+            title: "Tiếng cồng chiêng giữa đại ngàn",
+            shortDesc: "Gìn giữ ngọn lửa văn hóa cổ truyền của thanh niên các buôn làng Tây Nguyên.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Dưới mái nhà Rông bập bùng ánh lửa, âm thanh vang vọng của cồng chiêng từ lâu đã trở thành nhịp thở của đại ngàn Tây Nguyên.</p>
+              <p>Nhận thấy nguy cơ mai một văn hóa dân tộc, một nhóm thanh niên trẻ tại Đắc Lắk đã cùng nhau mở lớp dạy đánh chiêng miễn phí cho các em thiếu nhi trong buôn.</p>
+              <p>Bằng sự tâm huyết và tình yêu quê hương cuồng nhiệt, họ đã giữ cho ngọn lửa di sản văn hóa phi vật thể mãi tiếp nối qua muôn thế hệ.</p>
+            `
+          }
+        ]
+      },
+      "nam-bo": {
+        stories: [
+          {
+            id: "nam-bo-1",
+            location: "Cần Thơ",
+            title: "Ấm áp phù sa sông nước",
+            shortDesc: "Lớp học tình thương trên sông Hậu và những trái tim nhân ái vùng miền Tây.",
+            image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1000&q=80",
+            content: `
+              <p class="lead fw-normal">Miền Tây sông nước Cần Thơ không chỉ đong đầy phù sa ngọt ngào mà còn chan chứa tình người ấm áp.</p>
+              <p>Mỗi buổi chiều, lớp học tình thương trên ghe lại rộn rã tiếng đọc bài của các em nhỏ có hoàn cảnh khó khăn theo cha mẹ bôn ba trên sông nước.</p>
+              <p>Nhờ tấm lòng bao la của các thầy cô giáo tình nguyện, những ước mơ con chữ đã được chắp cánh, mang đến cho các em một tương lai tươi sáng hơn giữa vùng sông nước hiền hòa.</p>
+            `
+          }
+        ]
+      }
+    };
+  </script>
+
+  <!-- SCRIPT TỰ ĐỘNG LẤY VÀ HIỂN THỊ BÀI VIẾT -->
+  <script>
+    function loadStoryDetail() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const vungKey = urlParams.get('vung');
+      const storyId = urlParams.get('id');
+
+      const container = document.getElementById('detail-container');
+      const backBtn = document.getElementById('back-btn');
+
+      if (vungKey && backBtn) {
+        backBtn.href = `region.html?vung=${vungKey}`;
+      }
+
+      if (!vungKey || !storyId || !storiesData[vungKey]) {
+        container.innerHTML = `<div class="text-center py-5 text-danger"><h5>Không tìm thấy dữ liệu bài viết!</h5></div>`;
+        return;
+      }
+
+      const story = storiesData[vungKey].stories.find(item => item.id === storyId);
+
+      if (story) {
+        document.title = `${story.title} - CHẠM`;
+        container.innerHTML = `
+          <span class="badge bg-success mb-3 fs-6 px-3 py-2">${story.location}</span>
+          <h1 class="fw-bold text-dark mb-4 display-6">${story.title}</h1>
+          <img src="${story.image}" class="img-fluid rounded-3 mb-4 w-100" style="max-height: 450px; object-fit: cover;" alt="${story.title}">
+          <div class="story-body text-secondary fs-5" style="line-height: 1.8;">
+            ${story.content}
+          </div>
+        `;
+      } else {
+        container.innerHTML = `<div class="text-center py-5 text-danger"><h5>Không tìm thấy câu chuyện này!</h5></div>`;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadStoryDetail);
+    window.addEventListener('pageshow', loadStoryDetail);
+  </script>
+</body>
+</html>
